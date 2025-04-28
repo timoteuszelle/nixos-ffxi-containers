@@ -58,9 +58,10 @@ nixos-ffxi-containers/
 Make sure you got Docker setup first in your nixos configuration so you can prepare the images for the rest of the configuration. 
 Build Docker Images
 Build the server and bot images:
-
+```
 docker build -t ffxi-custom:latest docker/server
 docker build -t ffxiahbot:latest docker/bot
+```
 
 ## Setup Instructions
 
