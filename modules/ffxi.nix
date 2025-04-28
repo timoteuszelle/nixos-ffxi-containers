@@ -72,7 +72,7 @@
     wants = [ "network-online.target" ];
     serviceConfig = {
       ExecStartPre = "${pkgs.docker}/bin/docker rm -f ffxi-server || true";
-      ExecStart = "${pkgs.docker}/bin/docker run --name ffxi-server --network lsb -v /srv/ffxi/server/log:/server/log -v /srv/ffxi/server/settings:/app/settings -v /srv/ffxi/server/cert/login.key:/app/login.key -v /srv/ffxi/server/cert/login.cert:/app/login.cert -v /srv/ffxi/server/start.sh:/app/start.sh -p 54230:54230/tcp -p 54230:54230/udp -p 54231:54231/tcp -p 54001:54001/tcp -p 54002:54002/tcp -p 51220:51220/tcp -e DB_HOST=ffxi-mysql -e DB_PORT=3306 -e DB_USER=xiuser -e DB_PASS=${config.secrets.ffxi.mysqlPassword} -e DB_NAME=xidb -e ZONE_IP=192.168.1.200 --user 1003:1003 ffxi-custom:latest /app/start.sh";
+      ExecStart = "${pkgs.docker}/bin/docker run --name ffxi-server --network lsb -v /srv/ffxi/server/log:/server/log -v /srv/ffxi/server/settings:/app/settings -v /srv/ffxi/server/cert/login.key:/app/login.key -v /srv/ffxi/server/cert/login.cert:/app/login.cert -v /srv/ffxi/server/start.sh:/app/start.sh -p 54230:54230/tcp -p 54230:54230/udp -p 54231:54231/tcp -p 54001:54001/tcp -p 54002:54002/tcp -p 51220:51220/tcp -e DB_HOST=ffxi-mysql -e DB_PORT=3306 -e DB_USER=xiuser -e DB_PASS=${config.secrets.ffxi.mysqlPassword} -e DB_NAME=xidb -e ZONE_IP=<your_host_ip_here> --user 1003:1003 ffxi-custom:latest /app/start.sh";
       ExecStop = "${pkgs.docker}/bin/docker stop ffxi-server";
       Restart = "on-failure";
       RestartSec = "5s";
