@@ -1,0 +1,3 @@
+itemid,name,sell_single,buy_single,price_single,stock_single,buy_rate_single,sell_rate_single,sell_stacks,buy_stacks,price_stacks,stock_stacks,buy_rate_stacks,sell_rate_stacks
+2,Simple Bed,1,1,2000,10,1.0,1.0,0,1,0,10,1.0,1.0
+3,Oak Bed,1,1,10000,10,1.0,1.0,0,1,0,10,1.0,1.0

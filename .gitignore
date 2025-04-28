@@ -1,0 +1,16 @@
+# Sensitive files
+config/server/cert/login.key
+config/server/cert/login.cert
+config/bot/config.yaml
+modules/secrets.nix
+
+# Generated files
+config/mysql/*
+!config/mysql/my.cnf
+config/server/log/
+config/bot/output/cache/
+
+# Git and editor files
+.git/
+*.swp
+*.bak

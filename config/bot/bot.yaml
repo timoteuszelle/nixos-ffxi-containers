@@ -1,0 +1,19 @@
+scheduled:
+  scrub: [x]
+  refill: [x]
+  broker: []
+  clear: []
+manual:
+  subcommand: refill
+  options:
+    inp-csv: /app/output/custom_items.csv
+options:
+  scrub:
+    out-csv: /app/output/items.csv
+    server: ASURA
+    cache: /app/output/cache
+    overwrite: true
+  refill:
+    inp-csv: /app/output/items.csv
+  broker: {}
+  clear: {}
