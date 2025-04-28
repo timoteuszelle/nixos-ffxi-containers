@@ -2,7 +2,7 @@
 config/server/cert/login.key
 config/server/cert/login.cert
 config/bot/config.yaml
-modules/secrets.nix
+
 
 # Generated files
 config/mysql/*
