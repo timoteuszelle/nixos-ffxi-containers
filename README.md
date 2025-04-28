@@ -16,21 +16,26 @@ This repository provides a NixOS-based configuration for running a [LandSandBoat
 - Basic knowledge of NixOS and Docker.
 
 ## Directory Structure
-
-ffxi-nixos-config/
-├── configuration.nix       # Main NixOS configuration
-├── modules/               # NixOS modules
+```plaintext
+nixos-ffxi-containers/
+├── configuration.nix           # Main NixOS configuration
+├── modules/                   # NixOS modules
 │   ├── ffxi.nix
 │   ├── ddns.nix
 │   ├── secrets.nix
-├── docker/                # Dockerfiles
-│   ├── server/Dockerfile
-│   ├── bot/Dockerfile
-├── scripts/               # Startup scripts
-│   ├── server/start.sh
-│   ├── bot/run.sh
-├── config/                # Configuration files
-│   ├── mysql/my.cnf
+├── docker/                    # Dockerfiles
+│   ├── server/
+│   │   ├── Dockerfile
+│   ├── bot/
+│   │   ├── Dockerfile
+├── scripts/                   # Startup scripts
+│   ├── server/
+│   │   ├── start.sh
+│   ├── bot/
+│   │   ├── run.sh
+├── config/                    # Configuration files
+│   ├── mysql/
+│   │   ├── my.cnf
 │   ├── bot/
 │   │   ├── bot.yaml
 │   │   ├── config.yaml
@@ -47,6 +52,7 @@ ffxi-nixos-config/
 │   │   │   ├── login.key
 │   │   │   ├── login.cert
 ├── README.md
+├── .gitignore
 
 
 Make sure you got Docker setup first in your nixos configuration so you can prepare the images for the rest of the configuration. 
