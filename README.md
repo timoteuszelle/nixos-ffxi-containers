@@ -53,7 +53,6 @@ Make sure you got Docker setup first in your nixos configuration so you can prep
 Build Docker Images
 Build the server and bot images:
 
-
 docker build -t ffxi-custom:latest docker/server
 docker build -t ffxiahbot:latest docker/bot
 
@@ -92,6 +91,10 @@ Edit config/bot/config.yaml to set the MySQL password.
 Customize config/bot/bot.yaml for bot tasks (e.g., scrub, refill).
 
 7. Apply NixOS Configuration
+Depends on your situdation, apped your condifuration.nix with the required lines.
+You need to check the modules for what you are going to use. ffxi.nix needs a small update @ ZONE_IP=
+You need to decide if you are using the bot and ddns part. I might make changes later to this repo to repesent different setup choices.
+
 Copy configuration.nix and modules/ to /etc/nixos/:
 sudo cp -r modules /etc/nixos/
 sudo cp configuration.nix /etc/nixos/
